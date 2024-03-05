@@ -1,0 +1,5 @@
+[a-zA-Z0-9_]*
+[a-zA-Z0-9_]
+[a-zA-Z0-9_\u00f1\u00d1]+(\S*[a-zA-Z0-9_\u00f1\u00d1]*)*[a-zA-Z0-9_\u00f1\u00d1] Nombre Campañas
+([0-2][0-9]|(3)[0-1])(\-)(((0)[0-9])|((1)[0-2]))(\/)\d{4} Fechas formato dd/mm/aaaa No funciona
+([0][1-9]|[12][0-9]|3[01])(\-)([0][1-9]|[1][0-2])\2(\d{4}) Formato fecha dd-mm-aaaa No funciona

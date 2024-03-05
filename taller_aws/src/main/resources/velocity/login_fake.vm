@@ -1,0 +1,4 @@
+#parse("/velocity/base_layout_fake.vm")
+#@mainLayout()
+    <h1>"LOGIN page"</h1>
+#end

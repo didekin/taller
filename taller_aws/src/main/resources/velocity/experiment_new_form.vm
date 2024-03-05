@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<!--suppress HtmlUnknownTarget -->
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title>Nuevo experimento</title>
+</head>
+<body class="fuente-texto">
+<header>
+    <div class="container">
+        <!--Navbar Desktop-->
+        <nav class="navbar navbar-expand-lg d-none d-lg-flex" id="menu">
+            <!-- Brand/logo1 -->
+            <a class="navbar-brand mr-auto" href="#">
+                <img src="/Bosch-Logo.png" alt="Bosch">
+            </a>
+            <!-- Links -->
+            <ul class=" nav navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link color-link-menu flecha-nav fuente-menu activo" href="#" id="navbardrop"
+                       data-toggle="dropdown">
+                        Experimentos
+                    </a>
+                    <ul class="dropdown-menu submenu">
+                        <li>
+                            <a class="dropdown-item color-link-menu fuente-submenu activo" href="#">Nuevo</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item color-link-menu fuente-submenu" href="$menu_items.get(1)">Lista</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link color-link-menu fuente-menu" href="$menu_items.get(2)">Simulaciones</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link color-link-menu flecha-nav fuente-menu" href="#" id="navdardrop" data-toggle="dropdown">
+                        Ficheros
+                    </a>
+                    <ul class="dropdown-menu submenu">
+                        <li>
+                            <a class="dropdown-item color-link-menu fuente-submenu" href="$menu_items.get(3)">Ventas</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item color-link-menu fuente-submenu" href="$menu_items.get(4)">Aperturas</a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item color-link-menu fuente-submenu" href="$menu_items.get(5)">Comunicaciones</a>
+                        </li>
+
+                    </ul>
+                </li>
+
+            </ul>
+            <!-- Brand/logo2 -->
+            <a class="navbar-brand ml-auto" href="#">
+                <img src="/logo-leben.png" alt="leben">
+            </a>
+        </nav>
+    </div>
+    <!-- Navbar Mobile-Tablet  -->
+    <div class="pos-f-t d-lg-none">
+        <nav class="navbar navbar-light bg-light">
+            <!-- Brand/logo1 -->
+            <a class="navbar-brand mr-auto" href="#">
+                <img src="/Bosch-Logo.png" class="logo-menu-mobile img-fluid" alt="Bosch">
+            </a>
+            <!-- Brand/logo2 -->
+            <a class="navbar-brand ml-auto" href="#">
+                <img src="/logo-leben.png" class="logo-menu-mobile img-fluid" alt="leben">
+            </a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                    data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse submenu-mobile" id="navbarToggleExternalContent">
+                <div>
+                    <ul class="nav navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link color-link-menu flecha-nav fuente-menu" href="#" id="navbardrop"
+                               data-toggle="dropdown">
+                                Experimentos
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item color-link-menu fuente-submenu activo" href="#">Nuevo</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item color-link-menu fuente-submenu" href="$menu_items.get(1)">Lista</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link color-link-menu fuente-menu" href="$menu_items.get(2)">Simulaciones</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link color-link-menu flecha-nav fuente-menu" href="#" id="navdardrop"
+                               data-toggle="dropdown">
+                                Ficheros
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item color-link-menu fuente-submenu" href="$menu_items.get(3)">Ventas</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item color-link-menu fuente-submenu"
+                                       href="$menu_items.get(4)">Aperturas</a>
+                                </li>
+
+                                <li>
+                                    <a class="dropdown-item color-link-menu fuente-submenu" href="$menu_items.get(5)">Comunicaciones</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!--/.Navbar-->
+</header>
+<form action="$form_action" method="post" enctype="multipart/form-data" id="experimento_form">
+    <div class="container-fluid fondo-contenedor-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="color-secundario fuente-titulos entre-lineas">Nuevo experimento</h1>
+                    <!--suppress HtmlUnknownAttribute -->
+                    <button type="button" href="#masInformacion" class="btn iconoInformacion collapsed" data-toggle="collapse">
+                    </button>
+                    <div id="masInformacion" class="collapse">
+                        <ul class="lista-info">
+                            <li>Para definir un experimento, hay que definir dos campañas, A y B.</li>
+                            <li class="anidada">Las dos campañas tienen unos datos comunes a ambas:
+                                <ul class="sublista-info">
+                                    <li>Fecha de inicio</li>
+                                    <li>Fecha de fin</li>
+                                    <li>Comunicación
+                                    <li>
+                                    <li>Mercados</li>
+                                    <li>Conceptos</li>
+                                    <li>Participantes</li>
+                                </ul>
+                            </li>
+                            <li class="anidada">Las opciones a experimentar hay que definirlas para cada campaña:
+                                <ul class="sublista-info">
+                                    <li>Productos en campaña, hasta un máximo de tres. Para que puedan compararse los resultados,
+                                        al
+                                        menos uno de los productos ha de ser común a las dos campañas.
+                                    </li>
+                                    <li>Incentivo</li>
+                                    <li>Canal de comunicación</li>
+                                    <li>Texto de la comunicación</li>
+                                </ul>
+                            </li>
+                            <li>El nombre del fichero con los nuevos participantes ha de ser 'participantes.csv'. El formato:
+                                'id_fiscal; provincia; concepto; fecha_registro'.
+                            </li>
+                            <li>Todos los campos del formulario son obligatorios.</li>
+                        </ul>
+                    </div>
+                    <div class="container section">
+                        <div class="row">
+                            <div class="col-md-6 offset-md-3">
+                                <h2 class="color-titulos fuente-subtitulos entre-lineas-subtitulo">Datos Experimento</h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-8 offset-md-2">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="form-group col-12">
+                                            <label for="nombre">Nombre</label>
+                                            <input type="text" id="nombre" name="exp_nombre" class="form-control"
+                                                   aria-describedby="nombre_help" placeholder='Ej. "Experimento_marzo_2020"'
+                                                   minlength="5" maxlength="25" required
+                                                   pattern="[a-zA-Z0-9_\u00f1\u00d1]+(\S*[a-zA-Z0-9_\u00f1\u00d1]*)*[a-zA-Z0-9_\u00f1\u00d1]">
+                                            <small id="nombre_help" class="form-text text-mute">&nbsp;Entre 5 y 25 caracteres:
+                                                letras, número, guión bajo; sin espacios.</small>
+                                        </div>
+                                        <div class="form-group col-lg-5">
+                                            <label for="fechaInicio">Fecha de Inicio</label>
+                                            <input type="text" id="fechaInicio" name="fecha_inicio" class="form-control" value=""
+                                                   min="2021-06-10" max="2030-12-31" aria-describedby="fecha_help"
+                                                   placeholder="dd-mm-aaaa" maxlength="10" pattern="\d{2}-\d{2}-\d{4}" required>
+                                            <small id="fecha_help" class="form-text text mute">&nbsp;Formato de fecha
+                                                dd-mm-aaaa</small>
+                                        </div>
+                                        <div class="form-group col-lg-5  offset-md-2">
+                                            <label for="fechaFin">Fecha de Fin</label>
+                                            <input type="text" id="fechaFin" name="fecha_fin" class="form-control" value=""
+                                                   min="2021-06-10" max="2030-12-31" aria-describedby="fecha_help"
+                                                   placeholder="dd-mm-aaaa" maxlength="10" pattern="\d{2}-\d{2}-\d{4}" required>
+                                            <small id="fecha_help" class="form-text text mute">&nbsp;Formato de fecha
+                                                dd-mm-aaaa</small>
+                                        </div>
+                                        <div class="form-group col-lg-5">
+                                            <label for="mercados">Mercados</label>
+                                            <select class="form-control" id="mercados" name="mercados" multiple required>
+                                                <option value="" selected disabled>Seleccione al menos uno</option>
+                                                #foreach($mercado in $mercados)
+                                                    <option value="$mercado.getMercadoId()">$mercado.getNombre()</option>
+                                                #end
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-lg-5 offset-lg-2">
+                                            <label for="conceptos">Conceptos</label>
+                                            <select class="form-control" id="conceptos" name="conceptos" multiple required>
+                                                <option value="" selected disabled>Seleccionea al menos uno</option>
+                                                #foreach($concepto in $conceptos)
+                                                    <option value="$concepto.getConceptoId()">$concepto.getNombre()</option>
+                                                #end
+                                            </select>
+                                        </div>
+                                        <div class="col-12 form-group">
+                                            <p class="file-desc">El conjunto actual de participantes en base de datos comprende
+                                                $count_participantes participantes. Para utilizar un conjunto diferente al actual,
+                                                clique en la casilla y seleccione el fichero que los contiene.</p>
+                                            <div>
+                                                <input type="file" class="file-input" id="fichero" name="upload_file">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid fondo-contenedor-2 section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <h2 class="color-titulos text-center fuente-subtitulos entre-lineas-subtitulo">Datos de Campañas</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card border-color-cards">
+                        <h3 class="card-header fondo-titulo-cards color-titulo-cards text-center fuente-subtitulos">
+                            Campaña A
+                        </h3>
+                        <!--Card content-->
+                        <div class="card-body fondo-contenedor-2">
+                            <div class="form-group">
+                                <label for="nombreCampanaA">Nombre</label>
+                                <input type="text" id="nombreCampanaA" name="cod_promo" class="form-control"
+                                       aria-describedby="nombre_help" placeholder='Ej. "Experimento_marzo_2021"' minlength="5"
+                                       maxlength="25" required
+                                       pattern="[a-zA-Z0-9_\u00f1\u00d1]+(\s*[a-zA-Z0-9_\u00f1\u00d1]*)*[a-zA-Z0-9_\u00f1\u00d1]">
+                                <small id="nombre_help" class="form-text text-mute">&nbsp;Entre 5 y 25 caracteres: letras,
+                                    números, guión bajo; sin espacios.</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="PG1sA">Productos</label>
+                                <select multiple class="form-control" id="PG1sA" name="pg1s" required>
+                                    <option value="" disabled>Seleccione hasta 3</option>
+                                    #foreach($pg1 in $pg1s)
+                                        <option value="$pg1.getIdPg1()">$pg1.getDescripcion()</option>
+                                    #end
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="incentivoA">Incentivo</label>
+                                <select class="form-control single" id="incentivoA" name="incentivo_id" required>
+                                    <option value="" disabled selected>Seleccione uno</option>
+                                    #foreach($incentiv in $incentivo)
+                                        <option value="$incentiv.getIncentivoId()">$incentiv.getNombre()</option>
+                                    #end
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="comunicacion">Comunicación</label>
+                                <select class="form-control single" id="comunicacion" name="medio_id" required>
+                                    <option value="" disabled>Seleccione uno</option>
+                                    #foreach($medio in $medios_comunicacion)
+                                        <option value="$medio.getMedioId()">$medio.getNombre()</option>
+                                    #end
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="msg_promo_A">Texto comunicación</label>
+                                <textarea class="form-control" form="experimento_form" id="msg_promo_A" name="promo_medio_text"
+                                          maxlength="500" rows="8" placeholder="Escriba su mensaje aquí."
+                                          aria-describedby="msg_promo_A_help"></textarea>
+                                <small id="msg_promo_A_help" class="form-text text-mute">&nbsp;Máximo 500 caracteres.</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card border-color-cards">
+                        <h3 class="card-header fondo-titulo-cards color-titulo-cards text-center fuente-subtitulos">
+                            Campaña B
+                        </h3>
+                        <!--Card content-->
+                        <div class="card-body fondo-contenedor-2">
+                            <div class="form-group">
+                                <label for="nombreCampanaB">Nombre</label>
+                                <input type="text" id="nombreCampanaB" name="cod_variante" class="form-control"
+                                       aria-describedby="nombr_help" placeholder='Ej. "Experimento_marzo_2021"' minlength="5"
+                                       maxlength="25" required
+                                       pattern="[a-zA-Z0-9_\u00f1\u00d1]+(\S∫*[a-zA-Z0-9_\u00f1\u00d1]*)*[a-zA-Z0-9_\u00f1\u00d1]">
+                                <small id="nombre_help" class="form-text text-mute">&nbsp;Entre 5 y 25 caracteres: letras,
+                                    números, guión bajo; sin espacios.</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="PG1sB">Productos</label>
+                                <select multiple class="form-control" id="PG1sB" name="pg1s_variante" required>
+                                    <option value="" disabled>Seleccione hasta 3</option>
+                                    #foreach($pg1 in $pg1s)
+                                        <option value="$pg1.getIdPg1()">$pg1.getDescripcion()</option>
+                                    #end
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="incentivoB">Incentivo</label>
+                                <select class="form-control single" id="incentivoB" name="incentivo_id_variante" required>
+                                    <option value="" disabled selected>Seleccione 1</option>
+                                    #foreach($incentiv in $incentivo)
+                                        <option value="$incentiv.getIncentivoId()">$incentiv.getNombre()</option>
+                                    #end
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="comunicacion">Comunicación</label>
+                                <select class="form-control single" id="comunicacion" name="medio_id_variante" required>
+                                    <option value="" disabled>Seleccione uno</option>
+                                    #foreach($medio in $medios_comunicacion)
+                                        <option value="$medio.getMedioId()">$medio.getNombre()</option>
+                                    #end
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="msg_promo_B">Texto comunicación</label>
+                                <textarea class="form-control" form="experimento_form" id="msg_promo_B"
+                                          name="promo_medio_text_variante"
+                                          maxlength="500" rows="8" placeholder="Escriba su mensaje aquí."
+                                          aria-describedby="msg_promo_B_help"></textarea>
+                                <small id="msg_promo_B_help" class="form-text text-mute">&nbsp;Máximo 500 caracteres.</small>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid fondo-contenedor-3 section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 d-flex justify-content-center">
+                    <input type="submit" class="btn fondo-secundario color-boton" value="Obtener muestras">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <a type="button" href="#menu" class="volver-arriba fondo-contenedor-2">
+
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+</html>

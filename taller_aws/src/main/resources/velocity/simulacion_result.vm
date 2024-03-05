@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<!--suppress HtmlUnknownTarget -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title>Resultados de la simulacion</title>
+</head>
+<body class="fuente-texto resultados-simulacion">
+<header>
+    <div class="container">
+        <!--Navbar Desktop-->
+        <nav class="navbar navbar-expand-lg d-none d-lg-flex" id="menu">
+            <!-- Brand/logo1 -->
+            <a class="navbar-brand mr-auto" href="#">
+                <img src="/Bosch-Logo.png" alt="Bosch">
+            </a>
+            <!-- Links -->
+            <ul class=" nav navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link color-link-menu flecha-nav fuente-menu" href="#" id="navbardrop"
+                       data-toggle="dropdown">
+                        Experimentos
+                    </a>
+                    <ul class="dropdown-menu submenu">
+                        <li>
+                            <a class="dropdown-item color-link-menu fuente-submenu" href="$menu_items.get(0)">Nuevo</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item color-link-menu fuente-submenu" href="$menu_items.get(1)">Lista</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link color-link-menu fuente-menu activo" href="$menu_items.get(2)">Simulaciones</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link color-link-menu flecha-nav fuente-menu" href="#" id="navdardrop" data-toggle="dropdown">
+                        Ficheros
+                    </a>
+                    <ul class="dropdown-menu submenu">
+                        <li>
+                            <a class="dropdown-item color-link-menu fuente-submenu" href="$menu_items.get(3)">Ventas</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item color-link-menu fuente-submenu" href="$menu_items.get(4)">Aperturas</a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item color-link-menu fuente-submenu" href="$menu_items.get(5)">Comunicaciones</a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+            <!-- Brand/logo2 -->
+            <a class="navbar-brand ml-auto" href="#">
+                <img src="/logo-leben.png" alt="leben">
+            </a>
+        </nav>
+    </div>
+    <!-- Navbar Mobile-Tablet -->
+    <div class="pos-f-t d-lg-none">
+        <nav class="navbar navbar-light bg-light">
+            <!-- Brand/logo1 -->
+            <a class="navbar-brand mr-auto" href="#">
+                <img src="/Bosch-Logo.png" class="logo-menu-mobile img-fluid" alt="Bosch">
+            </a>
+            <!-- Brand/logo2 -->
+            <a class="navbar-brand ml-auto" href="#">
+                <img src="/logo-leben.png" class="logo-menu-mobile img-fluid" alt="leben">
+            </a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                    data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse submenu-mobile" id="navbarToggleExternalContent">
+                <div>
+                    <ul class="nav navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link color-link-menu flecha-nav fuente-menu" href="#" id="navbardrop"
+                               data-toggle="dropdown">
+                                Experimentos
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item color-link-menu fuente-submenu" href="$menu_items.get(0)">Nuevo</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item color-link-menu fuente-submenu" href="$menu_items.get(1)">Lista</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link color-link-menu fuente-menu activo" href="#">Simulaciones</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link color-link-menu flecha-nav fuente-menu" href="#" id="navdardrop"
+                               data-toggle="dropdown">
+                                Ficheros</a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item color-link-menu fuente-submenu" href="$menu_items.get(3)">Ventas</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item color-link-menu fuente-submenu"
+                                       href="$menu_items.get(4)">Aperturas</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item color-link-menu fuente-submenu" href="$menu_items.get(5)">Comunicaciones</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!--/.Navbar-->
+</header>
+<div class="container-fluid fondo-contenedor-1 section-bottom">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="color-secundario fuente-titulos entre-lineas">Resultados globales por Producto en Campaña</h1>
+                <div class="container section">
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <h2 class="fuente-experimento-subtitulo color-titulos minusculas"
+                                id="PG1">$promo_simulacion.getCodPromo()</h2>
+                        </div>
+                    </div>
+                    <div class="row fuente-encabezado-experimento">
+                        <div class="col-12 text-center">
+                            <p><span id="fechaInicio">$promo_simulacion.getFechaInicio() </span>- <span
+                                    id="fechaFin">$promo_simulacion.getFechaFin() </span></p>
+                            <p>Incentivo: <strong><span id="incentivo">$promo_simulacion.getIncentivoNombre()</span></strong></p>
+                            <p>Duración: <strong><span id="dias">$promo_simulacion.getDuracionDias()</span> días</strong></p>
+                            <p>Comunicación: <strong><span id="comunicacion">$medio_promo.getMedioName()</span>
+                            </strong></p>
+                            <p>Texto:</p>
+                            <div class="row">
+                                <div class="col-md-6 offset-md-3 text-md-left">
+                                    <p>
+                                        <span id="mensaje">$medio_promo.getTextMsg()</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <p>Nº participantes seleccionados: <strong><span id="numeroParticipantes">
+                                $result_aggr_simulation.getNumParticipantes()</span></strong></p>
+                        </div>
+                    </div>
+                    <div class="row fuente-encabezado-experimento">
+                        <div class="col-md-6 text-md-right text-center">
+                            <!--suppress HtmlUnknownAttribute -->
+                            <button type="button" href="#mercados" class="btn iconoOjoR collapsed" data-toggle="collapse">
+                                Mercados
+                            </button>
+                            <div id="mercados" class="collapse fuente-texto-iconoOjo">
+                                #foreach($mercado in $promo_simulacion.mercadosEnum())
+                                    <p class="dropdown-item mercados">$mercado.getNombre()</p>
+                                #end
+                            </div>
+                        </div>
+                        <div class="col-md-6 text-md-left text-center d-none d-md-block">
+                            <!--suppress HtmlUnknownAttribute -->
+                            <button type="button" href="#conceptos" class="btn iconoOjoL collapsed" data-toggle="collapse">
+                                Conceptos
+                            </button>
+                            <div id="conceptos" class="collapse fuente-texto-iconoOjo">
+                                #foreach($concepto in $promo_simulacion.conceptosEnum())
+                                    <p class="dropdown-item conceptos">$concepto.getNombre()</p>
+                                #end
+                            </div>
+                        </div>
+                        <div class="col-md-6 text-md-left text-center d-md-none">
+                            <!--suppress HtmlUnknownAttribute -->
+                            <button type="button" href="#conceptos" class="btn iconoOjoR collapsed" data-toggle="collapse">
+                                Conceptos
+                            </button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-10 offset-md-1">
+                            <div class="container">
+                                <div class="row">
+                                    #foreach($resultAvgPG1 in $result_aggr_simulation.getResultAvgPG1s())
+                                        <div class="col-12">
+                                            <div class="card no-border">
+                                                <h3 class="card-header fondo-titulo-cards color-titulo-cards text-center">
+                                                    <a href="$sim_pg1_clusters_path.actualPath($promo_simulacion.getIdPromo(), $resultAvgPG1.getPg1().getIdPg1())">
+                                                        $resultAvgPG1.getPg1().name()</a>
+                                                </h3>
+                                                <!--Card content-->
+                                                <div class="card-body fondo-cards-simulacion text-center">
+                                                    <p>Número de respuestas simuladas: <span id="numeroRespuestas1_1">
+                                                        $resultAvgPG1.getNumEstimaciones()</span></p>
+                                                    <p>Venta media diaria: <span
+                                                            id="ventaMedia1_1">$resultAvgPG1.getMediaGlobalTalleresStr()</span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    #end
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 simulacion-info-bottom">
+                            <p>Para obtener un diagrama de tres clusters con las respuestas estimadas para un producto, clique
+                                sobre el nombre.</p>
+                            <!--suppress HtmlUnknownAttribute -->
+                            <button type="button" href="#masInformacion" class="btn iconoInformacion collapsed"
+                                    data-toggle="collapse">
+                            </button>
+                            <div id="masInformacion" class="collapse">
+                                <ul class="lista-info">
+                                    <li>
+                                        Formato del fichero .csv: mercado;concepto;provincia;estimación
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+</html>

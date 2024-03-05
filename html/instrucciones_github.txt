@@ -1,0 +1,15 @@
+BAJAR CÓDIGO
+============
+
+Pedros-MacBook-Air:lebendata_taller crodrigo$ git pull taller pre
+
+SUBIR CÓDIGO
+============
+
+Pedros-MacBook-Air:lebendata_taller crodrigo$ ls html\
+Pedros-MacBook-Air:lebendata_taller crodrigo$ git checkout pre\
+Pedros-MacBook-Air:lebendata_taller crodrigo$ git add .\
+Pedros-MacBook-Air:lebendata_taller crodrigo$ git status\
+Pedros-MacBook-Air:lebendata_taller crodrigo$ git commit -m \'91Comentario\'92\
+Pedros-MacBook-Air:lebendata_taller crodrigo$ git push taller pre\
+

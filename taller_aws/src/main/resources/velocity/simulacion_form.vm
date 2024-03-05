@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<!--suppress HtmlUnknownTarget -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title>Simulaciones</title>
+</head>
+<body>
+<header>
+    <div class="container">
+        <!--Navbar Desktop-->
+        <nav class="navbar navbar-expand-lg d-none d-lg-flex" id="menu">
+            <!-- Brand/logo1 -->
+            <a class="navbar-brand mr-auto" href="#">
+                <img src="/Bosch-Logo.png" alt="Bosch">
+            </a>
+            <!-- Links -->
+            <ul class=" nav navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link color-link-menu flecha-nav fuente-menu" href="#" id="navbardrop"
+                       data-toggle="dropdown">
+                        Experimentos
+                    </a>
+                    <ul class="dropdown-menu submenu">
+                        <li>
+                            <a class="dropdown-item color-link-menu fuente-submenu" href="$menu_items.get(0)">Nuevo</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item color-link-menu fuente-submenu" href="$menu_items.get(1)">Lista</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link color-link-menu fuente-menu activo" href="#">Simulaciones</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link color-link-menu flecha-nav fuente-menu" href="#" id="navdardrop" data-toggle="dropdown">
+                        Ficheros
+                    </a>
+                    <ul class="dropdown-menu submenu">
+                        <li>
+                            <a class="dropdown-item color-link-menu fuente-submenu" href="$menu_items.get(3)">Ventas</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item color-link-menu fuente-submenu" href="$menu_items.get(4)">Aperturas</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item color-link-menu fuente-submenu" href="$menu_items.get(5)">Comunicaciones</a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+            <!-- Brand/logo2 -->
+            <a class="navbar-brand ml-auto" href="#">
+                <img src="/logo-leben.png" alt="leben">
+            </a>
+        </nav>
+    </div>
+    <!-- Navbar Mobile-Tablet -->
+    <div class="pos-f-t d-lg-none">
+        <nav class="navbar navbar-light bg-light">
+            <!-- Brand/logo1 -->
+            <a class="navbar-brand mr-auto" href="#">
+                <img src="/Bosch-Logo.png" class="logo-menu-mobile img-fluid" alt="Bosch">
+            </a>
+            <!-- Brand/logo2 -->
+            <a class="navbar-brand ml-auto" href="#">
+                <img src="/logo-leben.png" class="logo-menu-mobile img-fluid" alt="leben">
+            </a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                    data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse submenu-mobile" id="navbarToggleExternalContent">
+                <div>
+                    <ul class="nav navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link color-link-menu flecha-nav fuente-menu" href="#" id="navbardrop"
+                               data-toggle="dropdown">
+                                Experimentos
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item color-link-menu fuente-submenu" href="$menu_items.get(0)">Nuevo</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item color-link-menu fuente-submenu" href="$menu_items.get(1)">Lista</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link color-link-menu fuente-menu activo" href="#">Simulaciones</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link color-link-menu flecha-nav fuente-menu" href="#" id="navdardrop"
+                               data-toggle="dropdown">
+                                Ficheros</a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item color-link-menu fuente-submenu" href="$menu_items.get(3)">Ventas</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item color-link-menu fuente-submenu"
+                                       href="$menu_items.get(4)">Aperturas</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item color-link-menu fuente-submenu" href="$menu_items.get(5)">Comunicaciones</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!--/.Navbar-->
+</header>
+<form action="$form_action" method="post" enctype="multipart/form-data" id="simulacion_form">
+    <div class="container-fluid fondo-contenedor-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 simulacion-info">
+                    <h1 class="color-secundario fuente-titulos entre-lineas">SIMULACIÓN DE RESULTADOS DE UNA CAMPAÑA</h1>
+                    <!--suppress HtmlUnknownAttribute -->
+                    <button type="button" href="#masInformacion" class="btn iconoInformacion collapsed" data-toggle="collapse">
+                    </button>
+                    <div id="masInformacion" class="collapse">
+                        <ul class="lista-info">
+                            <li class="centrada">Una simulación calcula los resultados esperados de un diseño posible de campaña,
+                                si se aplicara a una selección de mercados-conceptos concreta, realizada entre los participantes
+                                que actualmente hay en la base de datos del Taller.
+                            </li>
+                            <li class="centrada">Todos los campos son obligatorios.</li>
+                        </ul>
+                    </div>
+                    <div class="container section">
+                        <div class="row">
+                            <div class="col-md-8 offset-md-2">
+                                <h2 class="color-titulos text-center fuente-subtitulos entre-lineas-subtitulo">Datos
+                                    Simulación</h2>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-8 offset-md-2">
+                                <div class="container">
+
+                                    <div class="row">
+                                        <div class="form-group col-6">
+                                            <label for="nombre">Nombre</label>
+                                            <input type="text" id="nombre" name="cod_promo" class="form-control"
+                                                   aria-describedby="nombre_help" placeholder='Ej. "promo_marzo_2021"'
+                                                   minlength="5" maxlength="25" required
+                                                   pattern="[a-zA-Z0-9_\u00f1\u00d1]+(\S*[a-zA-Z0-9_\u00f1\u00d1]*)*[a-zA-Z0-9_\u00f1\u00d1]">
+                                            <small id="nombre_help" class="form-text text-mute">&nbsp;Entre 5 y 25 caracteres:
+                                                letras,
+                                                números, guión bajo; sin espacios.</small>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="form-group col-4">
+                                            <label for="fechaInicio">Fecha de Inicio</label>
+                                            <input type="text" id="fechaInicio" name="fecha_inicio" class="form-control" value=""
+                                                   min="2021-06-10" max="2030-12-31" aria-describedby="fecha_help"
+                                                   placeholder="dd-mm-aaaa" maxlength="10" pattern="\d{2}-\d{2}-\d{4}" required>
+                                            <small id="fecha_help" class="form-text text mute">&nbsp;Formato de fecha
+                                                dd-mm-aaaa</small>
+                                        </div>
+                                        <div class="form-group col-4 offset-md-2">
+                                            <label for="fechaFin">Fecha de Fin</label>
+                                            <input type="text" id="fechaFin" name="fecha_fin" class="form-control" value=""
+                                                   min="2021-06-10" max="2030-12-31" aria-describedby="fecha_help"
+                                                   placeholder="dd-mm-aaaa" maxlength="10" pattern="\d{2}-\d{2}-\d{4}" required>
+                                            <small id="fecha_help" class="form-text text mute">&nbsp;Formato de fecha
+                                                dd-mm-aaaa</small>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="form-group col-5">
+                                            <label for="mercados">Mercados</label>
+                                            <select class="form-control" id="mercados" name="mercados" multiple required>
+                                                <option value="" selected disabled>Seleccione al menos uno</option>
+                                                #foreach($mercado in $mercados)
+                                                    <option value="$mercado.getMercadoId()">$mercado.getNombre()</option>
+                                                #end
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-5 offset-md-1">
+                                            <label for="conceptos">Conceptos</label>
+                                            <select class="form-control" id="conceptos" name="conceptos" multiple required>
+                                                <option value="" selected disabled>Seleccione al menos uno</option>
+                                                #foreach($concepto in $conceptos)
+                                                    <option value="$concepto.getConceptoId()">$concepto.getNombre()</option>
+                                                #end
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="form-group col-5">
+                                            <label for="PG1s">Productos</label>
+                                            <select class="form-control" id="PG1s" name="pg1s" multiple required>
+                                                <option value="" disabled selected>Seleccione hasta 3</option>
+                                                #foreach($pg1 in $pg1s)
+                                                    <option value="$pg1.getIdPg1()">$pg1.getDescripcion()</option>
+                                                #end
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-5 offset-md-1">
+                                            <label for="incentivo">Incentivo</label>
+                                            <select class="form-control single" id="incentivo" name="incentivo_id" required>
+                                                <option value="" disabled selected>Seleccione uno</option>
+                                                #foreach($incentiv in $incentivo)
+                                                    <option value="$incentiv.getIncentivoId()">$incentiv.getNombre()</option>
+                                                #end
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="form-group col-5">
+                                            <label for="comunicacion">Comunicación</label>
+                                            <select class="form-control single" id="comunicacion" name="medio_id" required>
+                                                <option value="" disabled selected>Seleccione uno</option>
+                                                #foreach($medio in $medios_comunicacion)
+                                                    <option value="$medio.getMedioId()">$medio.getNombre()</option>
+                                                #end
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-11">
+                                            <label for="msg_promo">Texto comunicación</label>
+                                            <textarea class="form-control" form="simulacion_form" id="msg_promo"
+                                                      name="promo_medio_text"
+                                                      maxlength="500" rows="7" placeholder="Escriba su mensaje aquí."
+                                                      aria-describedby="msg_promo_help"></textarea>
+                                            <small id="msg_promo_help" class="form-text text-mute">&nbsp;Máximo 500
+                                                caracteres.</small>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 d-flex justify-content-center">
+                                        <input type="submit" class="btn fondo-secundario color-boton btn-simular"
+                                               value="Simular">
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+</html>

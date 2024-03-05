@@ -1,0 +1,8 @@
+META-INF/CompilerHints
+com/lebendata/taller/bosch/generated/MyBenchmark_jmhType_B2.class
+com/lebendata/taller/bosch/generated/MyBenchmark_testParalell_1_jmhTest.class
+META-INF/BenchmarkList
+com/lebendata/taller/bosch/generated/MyBenchmark_jmhType_B1.class
+com/lebendata/taller/bosch/generated/MyBenchmark_jmhType_B3.class
+com/lebendata/taller/bosch/MyBenchmark.class
+com/lebendata/taller/bosch/generated/MyBenchmark_jmhType.class

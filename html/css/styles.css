@@ -1,0 +1,642 @@
+/*LOOK & FELL*/
+.fondo-contenedor-1{
+    background-color: #e3e3e3;
+}
+.fondo-contenedor-2{
+    background-color: #cecece;
+}
+.fondo-contenedor-3{
+    background-color: #f2f2f2;
+}
+.fondo-titulo-cards{
+    background-color: #848484!important;
+}
+.fondo-titulo-cards a{
+    text-decoration: none;
+    color: unset;
+}
+.fondo-titulo-cards a:hover{
+    text-decoration: underline;
+    color: #fff!important;
+}
+.fondo-cards-simulacion{
+    background-color: #fff;
+}
+.fondo-secundario{
+    background-color: #e90b18!important;
+}
+.fondo-tabla-destacado{
+    background-color: #ededed;
+}
+.border-color-cards{
+    border-color: #848484!important;
+}
+.color-secundario{/*Titulos h1, menú-hover e iconos*/
+    color: #e90b18;
+}
+.color-link-menu{
+    color: #464646;
+}
+.color-titulos{ /*h2*/
+    color: #434343;
+}
+.color-titulo-cards{
+    color:#fff;
+}
+.color-boton{
+    color: #fff!important;
+}
+.color-fuente{
+    color: #000;
+}
+a:hover, a.activo{
+    color: #e90b18!important;
+    font-weight: bold;  
+}
+.positivo{
+    color: #3cc101;
+    font-weight: bold;
+}
+.negativo{
+    color: #ea0b18;
+    font-weight: bold;
+}
+
+/*TITULO ENTRE LINEAS*/
+.entre-lineas::before, .entre-lineas::after{
+    content: '';
+    position: absolute;
+    border-bottom: 1px solid #e90b18;
+}
+.entre-lineas::before {
+    width: 50%;
+    top: 18px;
+    left: -50%
+}
+.entre-lineas::after {
+    width: 100%;
+    top: 18px;
+    margin-left: 0.5em;
+}
+
+.entre-lineas-subtitulo{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.entre-lineas-subtitulo::before, .entre-lineas-subtitulo::after{
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #434343;
+}
+.entre-lineas-subtitulo::before {
+    margin-right: 2em;
+}
+.entre-lineas-subtitulo::after {
+    margin-left: 2em;
+}
+    /*FUENTES*/
+/*@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');*/
+.fuente-texto{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.19;
+    letter-spacing: normal;
+}
+.fuente-encabezado-experimento{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px!important;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.83;
+    letter-spacing: normal;
+}
+.fuente-texto-iconoOjo{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+}
+.fuente-titulos{
+    font-family: Arial, Helvetica, sans-serif, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.35;
+    letter-spacing: normal;
+    text-transform: uppercase;  
+}
+.fuente-subtitulos{
+    font-family: Arial, Helvetica, sans-serif, sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.35;
+    letter-spacing: normal;
+    text-transform: uppercase;  
+}
+.fuente-experimento-subtitulo{/*Titulo resultados de simulacion tambien*/
+    font-family: Arial, Helvetica, sans-serif, sans-serif;
+    font-size: 27px;
+    font-weight: 700;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.35;
+    letter-spacing: normal;
+    text-transform: uppercase; 
+}
+.fuente-menu{
+    font-family: Arial, Helvetica, sans-serif, sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.35;
+    letter-spacing: normal;
+    text-transform: uppercase; 
+}
+.fuente-submenu{
+    object-fit: contain;
+    font-family: Arial, Helvetica, sans-serif, sans-serif;
+    font-size: 13px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-transform: uppercase;
+}
+.fuente-titulo-resultado-card{
+    font-size: 14px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.36;
+    letter-spacing: normal;
+}
+
+#numeroRegistrosCargados{
+    font-size: 21px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.29;
+    letter-spacing: normal;
+}
+/******************************************/
+/*MENU PRINCIPAL HORIZONTAL Y SUBMENU VERTICAL*/
+.nav-item{
+    margin-right: 15px;
+}
+
+.dropdown .submenu.show{
+    display: block;
+    border: none;
+    border-radius: unset;
+}
+
+.minusculas{
+    text-transform: none;
+}
+li.dropdown .flecha-nav::after{
+    content: "";
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 6px;
+    margin-left: 10px;
+    padding: 3px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+li.dropdown.show .flecha-nav::after{
+    content: "";
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    padding: 3px;
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+}
+li.dropdown a.nav-link{
+    color: #464646;
+}
+li.dropdown.show a.nav-link{
+    color: #e90b18;
+}
+/* .dropdown-menu{
+    padding: 15px;
+    margin-top: 0;
+    min-width: 8rem;
+} */
+ .dropdown-menu{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    min-width: 8rem;
+    padding: .5rem 0;
+    margin: .125rem 0 0;
+    font-size: 1rem;
+    color: #212529;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    background-clip: padding-box;
+} 
+p.dropdown-item{
+    padding: 0;
+}
+.submenu a.dropdown-item{
+    display: inline-block;
+    padding: .25em 1em;
+}
+a.dropdown-item:last-child{
+    border:none;
+    margin-right: 0px;
+}
+a.dropdown-item:hover{
+    content: "";
+    background: none;
+    color: #e90b18;
+}
+/************************************************/
+/*MENU MOBILE*/
+
+nav.bg-light{
+    background-color: #fff!important;
+}
+.navbar-light button.navbar-toggler{
+    color: #fff;
+    border-color: #464646;
+    background-color: #464646;
+}
+.navbar-light .navbar-nav a.nav-link{
+    color: #464646;
+}
+.navbar-light .navbar-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+.navbar-light .navbar-nav .show>.nav-link{
+    color: #464646!important;
+}
+.submenu-mobile{
+    width: 100%;
+}
+button.navbar-toggler{
+    padding: 2px;
+    border-radius: 0;
+}
+
+/*TABLAS*/
+
+/*Estilos TABLA LISTA EXPERIMENTOS*/
+table.table.tabla{
+    margin-bottom: 0px;
+}
+.my-custom-scrollbar {
+    position: relative;
+    height: 500px;
+    overflow: auto;
+}
+.table-wrapper-scroll-y {
+    display: block;
+    margin-top: 80px;
+}
+.tabla thead th{
+    vertical-align: middle!important;
+    border-bottom: none!important;
+    border-right: 5px solid #e3e3e3;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+.tabla tbody tr{
+    cursor: pointer;
+}
+.tabla tbody tr:hover{
+    text-decoration: underline;
+}
+.tabla tbody td, .tabla tbody th{
+    font-size: 12px;
+}
+.tabla thead th:last-child{
+    border-right: none;
+}
+/*Estilos TABLAS DE RESULTADOS:Experimentos Valores medios y Simulación*/
+.tabla-resultado th, .tabla-resultado td{
+    border: none!important;
+}
+/*Cambio ancho columna td de 20 a 44%*/
+.tabla-resultado td{ 
+    text-align: center;
+    font-weight: normal;
+    width: 44%;
+}
+table.tabla-resultado thead th{
+    font-size: 14px;
+    padding: 0;
+    vertical-align: middle;
+    color: #fff;
+}
+/*Cambiado de 38 a 23 altura fila cabecera*/
+.tabla-resultado thead tr{
+    height: 23px;
+}
+.tabla-resultado tbody th{
+    font-size: 11px;
+    font-weight: normal;
+    text-align: center;
+}
+.tabla-resultado tbody td{
+    font-size: 15px;
+    text-align: center;
+    height: 25px;
+}
+.tabla-resultado tbody td strong{
+    font-size: 12px;
+}
+.tabla-resultado.table-responsive{
+    display:table;
+}
+.table.tabla-resultado tbody td.conclusion-resultado{
+    padding: 0.25rem .75rem;
+    font-size: 12px;
+    height: 25px;
+}
+.table.tabla-resultado tbody td, .table.tabla-resultado tbody th{
+    padding: 0.25rem .75rem;
+    vertical-align: middle;
+}
+@media only screen and (max-width: 600px){
+    .tabla-resultado.table-responsive{
+        display:block;
+    }
+}
+/*Nueva clase tabla resultado experimento con datos comunes a
+todos los productos*/
+.tabla-resultado-exper th, .tabla-resultado-exper td{
+    border: none!important;
+}
+.tabla-resultado-exper tbody th{
+    text-align: center;
+    font-weight: normal;
+    vertical-align: middle;
+}
+.tabla-resultado-exper th{
+    text-align: center;
+}
+.tabla-resultado-exper tbody th{
+    font-size: 11px;
+}
+.tabla-resultado-exper tbody td{
+    font-size: 12px;
+    text-align: center;
+    height: 25px;
+    font-weight: bold;
+    width: 44%;
+}
+.tabla-resultado-exper.table-responsive{
+    display:table;
+}
+
+.table.tabla-resultado-exper tbody td, .table.tabla-resultado-exper tbody th{
+    padding: 0.25rem .75rem;
+    vertical-align: middle;
+}
+@media only screen and (max-width: 600px){
+    .tabla-resultado-exper.table-responsive{
+        display:block;
+    }
+}
+/*GLOBAL*/
+html{
+    scroll-behavior: smooth;
+}
+html, body{
+    max-width: 100%;
+    overflow-x: hidden;
+}
+.container-fluid:first-of-type{
+    padding-top: 90px;
+}
+.section{
+    padding: 60px 0;
+}
+.section-bottom{
+    padding-bottom: 60px;
+}
+.iconoInformacion{
+    position: absolute;
+    margin-bottom: 60px;
+}
+.simulacion-info-bottom .btn.iconoInformacion{
+    padding-left: 0;
+}
+.simulacion-info-bottom #masInformacion{
+    padding: 16.75px 15px;
+    margin-bottom: -60px;
+}
+.simulacion-info-bottom button.btn{
+    padding-bottom: 0;
+}
+.simulacion-info #masInformacion{
+    padding: 13px 15px;
+    padding-left: 30px;
+    margin-bottom: -80px;
+}
+#masInformacion{
+    padding: 16.5px 40px;
+    margin-bottom: -80px;
+}
+#masInformacion + div.container{
+    margin-top: 40px;
+}
+#masInformacion ul li{
+    margin: 10px 0;
+}
+#masInformacion ul li:first-child{
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+#masInformacion ul li ul.sublista-info li{
+    margin-top: 5px;
+    background: url('./imagen/i_cuadrado_3.png') no-repeat center left;
+}
+.iconoInformacion::after{
+    content: url(./imagen/icon_info_B.png)
+}
+.iconoInformacion.collapsed::after{
+    content: url(./imagen/icon_info_A.png)
+}
+.iconoOjoR::after{
+    content: url(./imagen/icon_eye_closed.png);
+    vertical-align: sub;
+}
+.iconoOjoR.collapsed::after{
+    content: url(./imagen/icon_eye_opened.png);
+    vertical-align: middle;
+}
+.iconoOjoL::before{
+    content: url(./imagen/icon_eye_closed.png);
+    vertical-align: sub;
+}
+.iconoOjoL.collapsed::before{
+    content: url(./imagen/icon_eye_opened.png);
+    vertical-align: middle;
+}
+
+
+.experimento-subtitulo{
+    margin-top: 60px;
+}
+
+.formato{
+    position: absolute;
+    left: 40px;
+    bottom: -8px;
+}
+.lista-info{
+    list-style: none;
+}
+ul.lista-info li{
+    background: url('./imagen/i_flecha.png') no-repeat center left;
+    padding: 0 0 0 10px;
+}
+ul.lista-info li.anidada{
+    background: url('./imagen/i_flecha.png') no-repeat;
+    background-position: 0% 6px;
+}
+ul.lista-info li.centrada{
+    background: url('./imagen/i_flecha.png') no-repeat;
+    background-position: 0% 10px;
+}
+.sublista-info{
+    list-style: none;
+}
+/* @media screen and ( min-height: 1500px )
+{
+   .volver-arriba{
+        display: block;  
+    }
+} */
+.volver-arriba{
+    content: url("./imagen/i_flecha_5_blanca.png");
+    margin: 60px 0;
+    padding: 12px;
+    text-decoration: none;
+}
+.volver-arriba:hover{
+    text-decoration: none;
+    content: url("./imagen/i_flecha_5_roja.png");
+}
+/*CARDS*/
+.resultados-simulacion .card .card-header{
+    font-size: 14px;
+    height: 38px;
+}
+.resultados-simulacion .card .card-body{
+    font-size: 15px;
+}
+.card{
+    border-radius: unset!important;
+    margin-bottom: 30px;
+}
+.card .card-header{
+    border-bottom: none;
+}
+.card .card-header a{
+    text-decoration: none;
+    color: unset;
+}
+.card .card-header a:hover{
+    text-decoration: underline;
+    color: #fff!important;
+    font-weight: normal;
+}
+.card-header:first-child{
+    border-radius: unset!important;
+}
+.resultados
+.no-border{
+    border: none!important;
+}
+.no-border .card-header{
+    border: none;
+}
+/*FORMS*/
+.form-control:focus, .btn:focus {
+    border-color: transparent!important ;
+    box-shadow: none!important;
+}
+input.btn{
+    padding: 12px 70px;
+    text-transform: uppercase;
+    border-radius: unset;
+}
+label{
+    margin-bottom: .25rem;
+    padding-top: 12px;
+    margin-left: 10px;
+}
+.file-desc{
+    margin-bottom: .25rem;
+    padding-top: 5px;
+    margin-left: 10px;
+}
+
+form .form-control::placeholder {
+    color: #495057;
+}
+form .form-control{
+    line-height: unset;
+    border-radius: unset;
+    border: none;
+}
+.btn-enviar-fichero, .btn-simular{
+    margin-top: 30px;
+}
+button.btn{
+    font-size: inherit;
+}
+input.btn.btn-simular{
+    padding: 12px 100px;
+}
+select.single.form-control{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+select.single.form-control{
+    background-image:
+        linear-gradient(45deg, transparent 50%, #464646 50%),
+        linear-gradient(135deg, #464646 50%, transparent 50%),
+        linear-gradient(to right, transparent, transparent);
+    background-position:
+        calc(100% - 20px) calc(1em + 2px),
+        calc(100% - 15px) calc(1em + 2px),
+        100% 0;
+    background-size:
+        5px 5px,
+        5px 5px,
+        2.5em 2.5em;
+    background-repeat: no-repeat;
+}
+#mensaje{
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.5;
+    font-style: italic;
+}

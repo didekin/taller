@@ -1,0 +1,33 @@
+notas_int/
+
+taller_aws/app_files/for_aws_only
+taller_aws/app_files/hikari.properties
+taller_aws/src/r_code/upload_particip_test.R
+
+taller_aws/target/
+taller_aws/logs
+taller_aws/notas
+taller_aws/src/terminal/
+taller_aws/app_files
+
+.idea/
+/**/*.iml
+
+/**/*.numbers
+
+# Mac files
+.DS_Store
+
+# VSCode files
+/**/*.code-workspace
+.project
+.settings
+
+# R ficheros
+**/*_cache
+**/.Rproj.user
+**/*.Rproj
+**/*.Rhistory
+**/.RData
+.Rproj.user
+

@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html  lang="es">
+<head>
+    <TITLE>P&aacute;gina personalizada para destinatario SMS</TITLE>
+</head>
+<body>
+<h1>P&Aacute;GINA HIPER-PERSONAL</h1>
+<p>$sms_custom_page_txt</p>
+</body>
+</html>

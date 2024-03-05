@@ -1,0 +1,5 @@
+#parse("/velocity/base_layout_fake.vm")
+#@mainLayout()
+##    TODO: pendiente construir mensajes de error.
+<h1>$msg.get("ERROR")</h1>
+#end
