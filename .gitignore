@@ -4,7 +4,8 @@ taller_aws/app_files/for_aws_only
 taller_aws/app_files/hikari.properties
 taller_aws/src/r_code/upload_particip_test.R
 
-taller_aws/target/
+**/target/
+html/imagen/**
 taller_aws/logs
 taller_aws/notas
 taller_aws/src/terminal/
@@ -16,7 +17,7 @@ taller_aws/app_files
 /**/*.numbers
 
 # Mac files
-.DS_Store
+**/.DS_Store
 
 # VSCode files
 /**/*.code-workspace
